@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchJobs } from '../actions/jobsActions';
 import FilterButtons from './FilterButtons';
 
+import "./JobsPage.css";
+
 const JobsPage = () => {
     const dispatch = useDispatch();
     const [loading, setLoading] = useState(false);
@@ -51,7 +53,7 @@ const JobsPage = () => {
     return (
         <div>
             <FilterButtons />
-            <div>
+            <div className='jobs' >
                 {jobs.map(job => (
                     <div key={job.jdUid}>
                         <h2>{job.companyName}</h2>
