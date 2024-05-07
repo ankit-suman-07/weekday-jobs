@@ -42,22 +42,22 @@ const Card = ({ job }) => {
                         ? <span>{job.minJdSalary} - {job.maxJdSalary} LPA</span>
                         : <span>Upto {job.maxJdSalary} LPA</span>
                 }
-                <span></span>
+                <img src={TickIcon} alt='check-mark-icon' />
             </div>
             <div className='about' >
-                <span>About Company:</span>
-                <span>About us</span>
-                <p>{job.jobDetailsFromCompany}</p>
+                <span className='about-main' >About Company:</span>
+                <span className='about-sub' >About us</span>
+                <p className='about-text' >{job.jobDetailsFromCompany}</p>
             </div>
             <div className='card-experience' >
-                <span>Minimum Experience: </span>
-                <span>{job.minExp} years</span>
+                <span className='exp-main' >Minimum Experience: </span>
+                <span className='exp-years' >{job.minExp} years</span>
             </div>
-            <button className='card-btn' >
+            <button className='apply-btn' >
                 <img src={LighteningIcon} alt='Lightning-icon' />
                 <span>Easy Apply</span>
             </button>
-            <button className='card-btn' >Unlock Referral ads</button>
+            <button className='refer-btn' >Unlock Referral ads</button>
         </div>
     )
 }

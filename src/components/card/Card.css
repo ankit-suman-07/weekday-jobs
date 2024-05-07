@@ -1,37 +1,85 @@
 .card {
-    border: 2px solid red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     display: flex;
+    border-radius: 10px;
         flex-direction: column;
-    }
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
     
-    .card-top {
-        border: 2px solid blue;
-        height: 40px;
-    }
+.card-top {
+        height: 60px;
+            display: flex;
+            margin: 0 10px 0 10px;
+            align-items: center;
+        }
     
-    .card-top-batch {
-        border: 2px solid blue;
+.card-top-batch {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            border-radius: 10px;
         height: 20px;
-    }
+        display: flex;
+            align-items: center;
+            justify-content: center;
+}
     
     .card-top-batch img {
         height: 60%;
-        margin-right: 5px;
+        margin: 0 5px 0 5px;
+        }
+        
+        .card-top-batch span {
+            margin-right: 5px;
+            font-size: 10px;
+                font-weight: 600;
     }
+        
     
-    .card-company {
-        border: 2px solid black;
+.card-company {
         height: 60px;
+        margin: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
     }
     
+.company-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.company-role {
+    font-size: 15px;
+}
+
+.company-location {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.card-salary {
+    height: 40px;
+    margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-salary img {
+    height: 15px;
+}
+
+.card-salary span {
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+    margin-right: 5px;
+}
     
-    
-    .card-company-logo {
-        border: 2px solid black;
+.card-company-logo {
         height: 60px;
         width: 60px;
         display: flex;
@@ -42,12 +90,71 @@
     .card-company-logo img {
         height: 70%;
     }
-    
-    .card-btn {
-        border: 2px solid cyan;
+.about {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-main {
+    font-weight: 600;
+    color: #333333;
+}
+
+.about-sub {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.about-text {
+    font-size: 14px;
+}
+
+.card-experience {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-main {
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+}
+
+.exp-years {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.apply-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: aqua;
+    margin: 10px;
         height: 40px;
-    }
-    
-    .card-btn img {
-        height: 50%;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        
+        
+        .apply-btn img {
+            height: 45%;
+            margin-right: 5px;
+}
+.refer-btn {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: #ffff;
+    margin: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
 }
