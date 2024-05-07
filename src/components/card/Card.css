@@ -1,3 +1,53 @@
 .card {
     border: 2px solid red;
+    display: flex;
+        flex-direction: column;
+    }
+    
+    .card-top {
+        border: 2px solid blue;
+        height: 40px;
+    }
+    
+    .card-top-batch {
+        border: 2px solid blue;
+        height: 20px;
+    }
+    
+    .card-top-batch img {
+        height: 60%;
+        margin-right: 5px;
+    }
+    
+    .card-company {
+        border: 2px solid black;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    
+    
+    .card-company-logo {
+        border: 2px solid black;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card-company-logo img {
+        height: 70%;
+    }
+    
+    .card-btn {
+        border: 2px solid cyan;
+        height: 40px;
+    }
+    
+    .card-btn img {
+        height: 50%;
 }
