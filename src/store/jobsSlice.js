@@ -8,8 +8,14 @@ export const jobsSlice = createSlice({
     },
     reducers: {
         setJobs: (state, action) => {
-            state.jobsList = action.payload;
-            state.filteredJobs = action.payload;
+            // Remove duplicates from the new data
+            const newJobs = action.payload.filter(job => !state.jobsList.some(existingJob => existingJob.jdUid === job.jdUid));
+
+            // Append the filtered new data to the existing jobsList
+            state.jobsList = [...state.jobsList, ...newJobs];
+
+            // Update filteredJobs as well if needed
+            state.filteredJobs = [...state.filteredJobs, ...newJobs];
         },
         filterJobs: (state, action) => {
             const { maxSalary, minSalary, location, jobRole } = action.payload;
