@@ -1,13 +1,13 @@
 import { setJobs, filterJobs } from '../store/jobsSlice';
 
-export const fetchJobs = () => async (dispatch) => {
+export const fetchJobs = (offset) => async (dispatch) => {
     try {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         const body = JSON.stringify({
             "limit": 10,
-            "offset": 0
+            "offset": offset
         });
 
         const requestOptions = {
@@ -21,6 +21,7 @@ export const fetchJobs = () => async (dispatch) => {
 
         // Assuming result.jdList contains the array of jobs
         dispatch(setJobs(data.jdList));
+        console.log("API called")
     } catch (error) {
         console.error('Error fetching jobs:', error);
     }
