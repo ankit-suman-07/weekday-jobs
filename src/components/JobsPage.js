@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchJobs } from '../actions/jobsActions';
 import FilterButtons from './FilterButtons';
+import Card from './card/Card';
 
 import "./JobsPage.css";
 
@@ -10,6 +11,7 @@ const JobsPage = () => {
     const [loading, setLoading] = useState(false);
     const [offset, setOffset] = useState(0);
     const jobs = useSelector(state => state.jobs.filteredJobs);
+    console.log(jobs)
 
     useEffect(() => {
         dispatch(fetchJobs(offset));
@@ -54,12 +56,10 @@ const JobsPage = () => {
         <div>
             <FilterButtons />
             <div className='jobs' >
+
                 {jobs.map(job => (
                     <div key={job.jdUid}>
-                        <h2>{job.companyName}</h2>
-                        <p>Location: {job.location}</p>
-                        <p>Salary: {job.minJdSalary} - {job.maxJdSalary}</p>
-                        {/* Add more job details here */}
+                        <Card job={job} />
                     </div>
                 ))}
             </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import "./Card.css";
 
-const Card = () => {
+const Card = ({ job }) => {
     return (
-        <div>Card</div>
+        <div>
+            {job.companyName}
+        </div>
     )
 }
 
