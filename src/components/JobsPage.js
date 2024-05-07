@@ -13,20 +13,6 @@ const JobsPage = () => {
         dispatch(fetchJobs(offset));
     }, [dispatch]);
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (
-    //             window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight
-    //         ) {
-    //             // User has scrolled to the bottom, load more data
-    //             setLoading(true);
-    //         }
-    //     };
-
-    //     window.addEventListener('scroll', handleScroll);
-
-    //     return () => window.removeEventListener('scroll', handleScroll);
-    // }, []);
 
     const handleScroll = async () => {
         // console.log("scrollHeight" + document.documentElement.scrollHeight);
@@ -50,11 +36,16 @@ const JobsPage = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+
     useEffect(() => {
         if (!loading) return;
 
-        dispatch(fetchJobs(jobs.length)); // Pass the current number of jobs as offset
-        setLoading(false);
+        const timeoutId = setTimeout(() => {
+            dispatch(fetchJobs(jobs.length));
+            setLoading(false);
+        }, 1000);
+
+        return () => clearTimeout(timeoutId);
     }, [loading, dispatch, jobs.length]);
 
     return (
