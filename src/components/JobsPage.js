@@ -58,9 +58,7 @@ const JobsPage = () => {
             <div className='jobs' >
 
                 {jobs.map(job => (
-                    <div key={job.jdUid}>
-                        <Card job={job} />
-                    </div>
+                    <Card job={job} key={job.jdUid} />
                 ))}
             </div>
             {loading && <p>Loading...</p>}
