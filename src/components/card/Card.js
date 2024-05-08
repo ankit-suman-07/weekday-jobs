@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./Card.css";
 
 import TimeIcon from "../../assets/hourglass.png";
@@ -8,7 +8,6 @@ import ProfileIcon_1 from "../../assets/boy.png";
 import ProfileIcon_2 from "../../assets/man.png";
 
 const Card = ({ job }) => {
-    const [days, setDays] = useState(1);
 
     function capitalizeWords(str) {
         // Split the string into an array of words
