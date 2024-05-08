@@ -48,6 +48,9 @@ const Card = ({ job }) => {
                 <span className='about-main' >About Company:</span>
                 <span className='about-sub' >About us</span>
                 <p className='about-text' >{job.jobDetailsFromCompany}</p>
+                <div className='about-fixed' >
+                    View Job
+                </div>
             </div>
             <div className='card-experience' >
                 <span className='exp-main' >Minimum Experience: </span>
