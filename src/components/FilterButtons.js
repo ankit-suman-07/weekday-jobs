@@ -5,6 +5,12 @@ import "./FilterButtons.css";
 
 const FilterButtons = () => {
     const dispatch = useDispatch();
+
+    const [job, setJob] = useState([]);
+    const [remoteWork, setRemoteWork] = useState("");
+    const [minSal, setMinSal] = useState("");
+    const [minExperience, setMinExperience] = useState("");
+
     const [filters, setFilters] = useState({
         minExperience: '',
         remote: '',
@@ -42,72 +48,105 @@ const FilterButtons = () => {
 
     return (
         <div className='filter' >
+            <div className='filter-box' >
+                {
+                    filters.minExperience &&
+                    <span>Minimum Experience</span>
+                }
+                <select
+                    name="minExperience"
+                    value={filters.minExperience}
+                    onChange={handleChange}
+                >
+                    <option value="">Min Experience</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
 
-            <select
-                name="minSalary"
-                value={filters.minExperience}
-                onChange={handleChange}
-            >
-                <option value="">Min Experience</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
+                </select>
+            </div>
 
-            </select>
+            <div className='filter-box' >
+                {
+                    filters.remote &&
+                    <span>Remote</span>
+                }
+                <select
+                    name="remote"
+                    value={filters.remote}
+                    onChange={handleChange}
+                >
+                    <option value="">Remote</option>
+                    <option value="remote">Remote</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="in-office">In-office</option>
+                </select>
+            </div>
 
-            <select
-                name="location"
-                value={filters.remote}
-                onChange={handleChange}
-            >
-                <option value="">Remote</option>
-                <option value="remote">Remote</option>
-                <option value="hybrid">Hybrid</option>
-                <option value="in-office">In-office</option>
-            </select>
+            <div className='filter-box' >
+                {
+                    filters.minSalary &&
+                    <span>Minimum Salary</span>
+                }
+                <select
+                    name="minSalary"
+                    value={filters.minSalary}
+                    onChange={handleChange}
+                >
+                    <option value="">Min Salary</option>
+                    <option value="0">0 L</option>
+                    <option value="10">10 L</option>
+                    <option value="20">20 L</option>
+                    <option value="30">30 L</option>
+                    <option value="40">40 L</option>
+                    <option value="50">50 L</option>
+                    <option value="60">60 L</option>
+                    <option value="70">70 L</option>
 
-            <select
-                name="minSalary"
-                value={filters.minSalary}
-                onChange={handleChange}
-            >
-                <option value="">Min Salary</option>
-                <option value="0">0 L</option>
-                <option value="10">10 L</option>
-                <option value="20">20 L</option>
-                <option value="30">30 L</option>
-                <option value="40">40 L</option>
-                <option value="50">50 L</option>
-                <option value="60">60 L</option>
-                <option value="70">70 L</option>
+                </select>
+            </div>
 
-            </select>
+            <div className='filter-box' >
+                {
+                    filters.jobRole &&
+                    <span>Role</span>
+                }
+                <select
+                    name="jobRole"
+                    value={filters.jobRole}
+                    onChange={handleChange}
+                >
+                    <option value="">Job Role</option>
+                    <option value="Engineering" disabled>Engineering</option>
+                    <option value="frontend">Frontend</option>
+                </select>
+            </div>
 
-            <select
-                name="jobRole"
-                value={filters.jobRole}
-                onChange={handleChange}
-            >
-                <option value="">Job Role</option>
-                <option value="Engineering" disabled>Engineering</option>
-                <option value="frontend">Frontend</option>
-            </select>
-            <input
-                type="text"
-                name="companyName"
-                placeholder="Search by Company Name"
-                value={filters.companyName}
-                onChange={handleChange}
-            />
-            <button onClick={handleApplyFilters}>Apply Filters</button>
-            <button onClick={handleClearFilters}>Clear Filters</button>
+            <div className='filter-box' >
+                {
+                    filters.companyName &&
+                    <span>Company</span>
+                }
+                <input
+                    type="text"
+                    name="companyName"
+                    placeholder="Search by Company Name"
+                    value={filters.companyName}
+                    onChange={handleChange}
+                />
+            </div>
+
+            <div className='filter-box' >
+                <button onClick={handleClearFilters}>Clear Filters</button>
+            </div>
+
         </div>
     );
 };

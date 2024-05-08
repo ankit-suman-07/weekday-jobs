@@ -21,8 +21,9 @@ export const jobsSlice = createSlice({
             const { minExperience, remote, minSalary, jobRole, companyName } = action.payload;
             state.filteredJobs = state.jobsList.filter(job =>
                 (!minExperience || job.minExp >= minExperience) &&
-                (!remote || job.location === remote) &&
+                (!remote || job.location.toLowerCase() === remote.toLowerCase()) &&
                 (!minSalary || job.minJdSalary >= minSalary) &&
+                (!jobRole || job.jobRole.toLowerCase() === jobRole.toLowerCase()) &&
                 (!companyName || job.companyName.toLowerCase().includes(companyName.toLowerCase()))
             );
         },

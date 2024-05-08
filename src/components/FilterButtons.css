@@ -1,4 +1,50 @@
 .filter {
-    border: 2px solid black;
     margin: 0 20px;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    select,
+    input {
+        height: 40px;
+        margin: 0 10px 10px 0;
+        width: 100%;
+        border: 2px solid grey;
+        border-radius: 5px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: grey;
+    }
+    
+    .filter-box {
+        min-width: 100px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .filter-box span {
+        font-size: 12px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+    }
+    
+    .filter button {
+        border: 2px solid grey;
+        background-color: #ffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 5px;
+        height: 40px;
+        margin-bottom: 12px;
+    }
+    
+    .filter button:hover {
+        background-color: grey;
+        color: #ffff;
 }
