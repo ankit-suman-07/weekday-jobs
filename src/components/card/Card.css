@@ -93,7 +93,7 @@
 .about {
         max-height: 300px;
             overflow: hidden;
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -105,7 +105,7 @@
     width: 100%;
     height: 60px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     color: blue;
     font-size: 14px;
@@ -174,4 +174,13 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+}
+.refer-btn img {
+    height: 18px;
+    margin-right: 2px;
+    filter: blur(2px);
+}
+
+.refer-btn span {
+    margin-left: 5px;
 }

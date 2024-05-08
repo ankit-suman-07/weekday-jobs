@@ -4,6 +4,8 @@ import "./Card.css";
 import TimeIcon from "../../assets/hourglass.png";
 import TickIcon from "../../assets/check.png";
 import LighteningIcon from "../../assets/lightening.png";
+import ProfileIcon_1 from "../../assets/boy.png";
+import ProfileIcon_2 from "../../assets/man.png";
 
 const Card = ({ job }) => {
     const [days, setDays] = useState(1);
@@ -60,7 +62,11 @@ const Card = ({ job }) => {
                 <img src={LighteningIcon} alt='Lightning-icon' />
                 <span>Easy Apply</span>
             </button>
-            <button className='refer-btn' >Unlock Referral ads</button>
+            <button className='refer-btn' >
+                <img src={ProfileIcon_1} alt='profile-icon' />
+                <img src={ProfileIcon_2} alt='profile-icon' />
+                <span>Unlock Referral ads</span>
+            </button>
         </div>
     )
 }
