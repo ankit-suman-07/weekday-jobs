@@ -50,7 +50,7 @@ const JobsPage = () => {
         }, 1000);
 
         return () => clearTimeout(timeoutId);
-    }, [loading, dispatch, jobs.length]);
+    }, [loading, dispatch]);
 
     return (
         <div>

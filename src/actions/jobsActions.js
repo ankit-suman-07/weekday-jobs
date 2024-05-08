@@ -6,7 +6,7 @@ export const fetchJobs = (offset) => async (dispatch) => {
         myHeaders.append("Content-Type", "application/json");
 
         const body = JSON.stringify({
-            "limit": 10,
+            "limit": 9,
             "offset": offset
         });
 
