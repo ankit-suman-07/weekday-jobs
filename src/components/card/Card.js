@@ -67,7 +67,11 @@ const Card = ({ job }) => {
             </div>
             <div className='card-experience' >
                 <span className='exp-main' >Minimum Experience: </span>
-                <span className='exp-years' >{job.minExp} years</span>
+                {
+                    job.minExp
+                        ? <span className='exp-years' >{job.minExp} years</span>
+                        : <span className='exp-years' >0 years</span>
+                }
             </div>
             <button className='apply-btn' >
                 <img src={LighteningIcon} alt='Lightning-icon' />
