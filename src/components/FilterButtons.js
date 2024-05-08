@@ -6,10 +6,10 @@ import "./FilterButtons.css";
 const FilterButtons = () => {
     const dispatch = useDispatch();
 
-    const [job, setJob] = useState([]);
-    const [remoteWork, setRemoteWork] = useState("");
-    const [minSal, setMinSal] = useState("");
-    const [minExperience, setMinExperience] = useState("");
+    // const [job, setJob] = useState([]);
+    // const [remoteWork, setRemoteWork] = useState("");
+    // const [minSal, setMinSal] = useState("");
+    // const [minExperience, setMinExperience] = useState("");
 
     const [filters, setFilters] = useState({
         minExperience: '',
@@ -58,7 +58,7 @@ const FilterButtons = () => {
                     value={filters.minExperience}
                     onChange={handleChange}
                 >
-                    <option value="">Min Experience</option>
+                    <option value="">Minimum Experience</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -100,7 +100,7 @@ const FilterButtons = () => {
                     value={filters.minSalary}
                     onChange={handleChange}
                 >
-                    <option value="">Min Salary</option>
+                    <option value="">Minimum Base Pay</option>
                     <option value="0">0 L</option>
                     <option value="10">10 L</option>
                     <option value="20">20 L</option>
@@ -126,6 +126,10 @@ const FilterButtons = () => {
                     <option value="">Job Role</option>
                     <option value="Engineering" disabled>Engineering</option>
                     <option value="frontend">Frontend</option>
+                    <option value="backend">Backend</option>
+                    <option value="fullstack">Fullstack</option>
+                    <option value="ios">IOS</option>
+                    <option value="android">Android</option>
                 </select>
             </div>
 
