@@ -61,7 +61,7 @@ const JobsPage = () => {
                     <Card job={job} key={job.jdUid} />
                 ))}
             </div>
-            {loading && <p>Loading...</p>}
+            {loading && <div className='loading' >Loading...</div>}
         </div>
     );
 };
