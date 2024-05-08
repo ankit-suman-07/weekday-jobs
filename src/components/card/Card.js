@@ -10,7 +10,18 @@ import ProfileIcon_2 from "../../assets/man.png";
 const Card = ({ job }) => {
     const [days, setDays] = useState(1);
 
+    function capitalizeWords(str) {
+        // Split the string into an array of words
+        const words = str.split(' ');
 
+        // Capitalize the first letter of each word
+        const capitalizedWords = words.map(word => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+
+        // Join the capitalized words back into a single string
+        return capitalizedWords.join(' ');
+    }
 
     return (
         <div className='card' >
@@ -27,13 +38,13 @@ const Card = ({ job }) => {
                 </div>
                 <div className='card-company-details' >
                     <div className='company-name' >
-                        {job.companyName}
+                        {capitalizeWords(job.companyName)}
                     </div>
                     <div className='company-role' >
-                        {job.jobRole}
+                        {capitalizeWords(job.jobRole)}
                     </div>
                     <div className='company-location' >
-                        {job.location}
+                        {capitalizeWords(job.location)}
                     </div>
                 </div>
             </div>
@@ -51,7 +62,7 @@ const Card = ({ job }) => {
                 <span className='about-sub' >About us</span>
                 <p className='about-text' >{job.jobDetailsFromCompany}</p>
                 <div className='about-fixed' >
-                    View Job
+                    <span>View Job</span>
                 </div>
             </div>
             <div className='card-experience' >

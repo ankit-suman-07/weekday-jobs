@@ -113,6 +113,9 @@
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
 
 }
+.about-fixed span:hover {
+    cursor: pointer;
+}
 .about-main {
     font-weight: 600;
     color: #333333;
@@ -155,11 +158,13 @@
             align-items: center;
             justify-content: center;
             font-weight: 600;
-        }
+}
         
+ .apply-btn:hover {
+     cursor: pointer;
+ }
         
-        
-        .apply-btn img {
+.apply-btn img {
             height: 45%;
             margin-right: 5px;
 }
@@ -174,6 +179,9 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
+}
+.refer-btn:hover {
+    cursor: pointer;
 }
 .refer-btn img {
     height: 18px;
