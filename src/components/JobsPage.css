@@ -4,3 +4,16 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
 }
+@media only screen and (max-width: 960px) {
+    .jobs {
+        margin: 20px 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .jobs {
+        margin: 20px 10px;
+        grid-template-columns: 1fr;
+    }
+}
