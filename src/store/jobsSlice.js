@@ -18,12 +18,12 @@ export const jobsSlice = createSlice({
             state.filteredJobs = [...state.filteredJobs, ...newJobs];
         },
         filterJobs: (state, action) => {
-            const { maxSalary, minSalary, location, jobRole } = action.payload;
+            const { minExperience, remote, minSalary, jobRole, companyName } = action.payload;
             state.filteredJobs = state.jobsList.filter(job =>
-                (!maxSalary || job.maxJdSalary <= maxSalary) &&
+                (!minExperience || job.minExp >= minExperience) &&
+                (!remote || job.location === remote) &&
                 (!minSalary || job.minJdSalary >= minSalary) &&
-                (!location || job.location === location) &&
-                (!jobRole || job.jobRole === jobRole)
+                (!companyName || job.companyName.toLowerCase().includes(companyName.toLowerCase()))
             );
         },
     },
