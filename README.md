@@ -1,6 +1,4 @@
-# Weekday Frontend Assignment
-
-### Deployed at: [Link](https://weekday-jobs-liart.vercel.app/)
+## Deployed at: [Link](https://weekday-jobs-liart.vercel.app/)
 
 ## How to run locally
 
